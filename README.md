@@ -169,6 +169,23 @@ Install Node.js and npm.  Leveraging the Node Version Manager (nvm) makes this s
 
 Follow the Linux steps outlined in GitHub's [Generating a new SSH key and adding it to the ssh-agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) guide.
 
+# git
+
+Git should already be installed.  You can verify this by running `$ git --version`.  This adds some reasonable aliases:
+
+1.  Open `~/.gitconfig`.
+2.  Add some reasonable aliases to improve your developer experience:
+    ```
+    [alias]
+        alias = !git config --list | grep 'alias' | sort
+        co = !git checkout $* && echo "Checked out:"
+        st = !git status
+        cp = !git cherry-pick
+        p = !git fetch --tags --all && git pull --rebase
+        pp = !git p && git push
+        last = !git log -1 HEAD
+        wipe = !git clean -xfd && git reset HEAD --hard
+    ```
 
 # Uninstall WSL
 
