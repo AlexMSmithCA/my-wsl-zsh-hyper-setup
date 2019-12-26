@@ -171,7 +171,17 @@ Follow the Linux steps outlined in GitHub's [Generating a new SSH key and adding
 
 # git
 
-Git should already be installed.  You can verify this by running `$ git --version`.  This adds some reasonable aliases:
+Git should already be installed.  You can verify this by running `$ git --version`.
+
+If your git is out of date, you can upgrade it to the latest version:
+
+```sh
+$ sudo add-apt-repository ppa:git-core/ppa -y
+$ sudo apt-get update
+$ sudo apt-get install git -y
+```
+
+Add some reasonable aliases:
 
 1.  Open `~/.gitconfig`.
 2.  Add some reasonable aliases to improve your developer experience:
