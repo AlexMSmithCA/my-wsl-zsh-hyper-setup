@@ -140,9 +140,13 @@ Install Hyper, an Eletron-powered terminal.
 
 Exit and reload Hyper or do a hard reload (`ctrl+shift+r` by default).
 
-# nvm
+# Install Node.js
 
-Install Node.js and npm.  Leveraging the Node Version Manager (nvm) makes this seamless and straight forward.
+Install Node.js.  Two possible paths are provided.
+
+## nvm
+
+Leveraging the Node Version Manager (nvm) makes this seamless and straight forward.
 
 1.  Install nvm using the install script found [here](https://github.com/nvm-sh/nvm#install--update-script) and pipe it to `zsh`:
     ```sh
@@ -163,6 +167,23 @@ Install Node.js and npm.  Leveraging the Node Version Manager (nvm) makes this s
     ```sh
     $ node --version
     $ npm --version
+    ```
+
+## Volta
+
+Volta is a viable alternative to nvm that simplifies version management for your tools.  Check it out at [volta.sh](http://volta.sh/):
+
+1.  Install Volta:
+    ```sh
+    $ curl https://get.volta.sh | bash
+    ```
+2.  Install Node.js:
+    ```sh
+    $ volta install node
+    ```
+3.  Ensure that `node` is available:
+    ```sh
+    $ node --version
     ```
 
 # GitHub
