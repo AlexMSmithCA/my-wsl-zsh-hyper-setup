@@ -218,6 +218,22 @@ Add some reasonable aliases:
         wipe = !git clean -xfd && git reset HEAD --hard
     ```
 
+# `autojump`
+
+Optionally install a helpful shell utility - [`autojump`](https://github.com/wting/autojump) - to more quickly navigate your filesystem:
+
+1.  Install `autojump`:
+    ```sh
+    $ sudo apt-get install autojump
+    ```
+2.  Configure zsh to source startup script by adding the following to you `~/.zshrc`:
+    ```
+    # Source autojump
+    if [[ -s "/usr/share/autojump/autojump.sh" ]]; then
+        source "/usr/share/autojump/autojump.sh"
+    fi
+    ```
+
 # Uninstall WSL
 
 If for whatever reason you wish to uninstall the Windows Subsystem for Linux (WSL), simply open up Windows PowerShell and run the following command:
